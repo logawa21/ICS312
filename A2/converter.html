@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Base Converter</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for sticky-footer -->
+  <link href="css/sticky-footer.css" rel="stylesheet">
+
+  <!-- Custom styles for the body -->
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Lauren's Base Converter</h1>
+  </div>
+
+  <table>
+    <tr>
+      <td class="border">
+        <label>
+          <input type="radio" value="decimal" id="decimal_radio" name="base"
+                 onclick="baseConvert(this.value)"><br>Decimal
+        </label>
+      </td>
+      <td class="border">
+        <label>
+          <input type="radio" value="hex" id="hex_radio" name="base" onclick="baseConvert(this.value)"><br>Hex
+        </label>
+      </td>
+      <td class="border">
+        <label>
+          <input type="radio" value="binary" id="binary_radio" name="base" onclick="baseConvert(this.value)"><br>Binary
+        </label>
+      </td>
+    </tr>
+  </table>
+
+  <table id="display">
+    <tr>
+      <td>&nbsp;<span id="base_display"></span>&nbsp;</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>
+        <label class="form-group">
+          <input type="text" class="form-control" id="number_input">
+        </label>
+      </td>
+    </tr>
+  </table>
+
+  <table id="resultDisplay">
+    <tr>
+      <td>&nbsp;<span id="result_display"></span>&nbsp;</td>
+    </tr>
+  </table>
+
+  Result
+
+  <table>
+    <tr>
+      <td>
+        <input class="btn btn-default" type="button" value="C" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="D" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="E" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="F" onclick="appendDigit(this.value)">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input class="btn btn-default" type="button" value="8" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="9" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="A" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="B" onclick="appendDigit(this.value)">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input class="btn btn-default" type="button" value="4" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="5" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="6" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="7" onclick="appendDigit(this.value)">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input class="btn btn-default" type="button" value="0" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="1" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="2" onclick="appendDigit(this.value)">
+      </td>
+      <td>
+        <input class="btn btn-default" type="button" value="3" onclick="appendDigit(this.value)">
+      </td>
+    </tr>
+    <tr>
+      <td class="clearTable" colspan=4>
+        <input class="btn btn-default" id="clearBtn" type="button" value="Clear"
+               onclick="clearDisplay()">
+      </td>
+    </tr>
+  </table>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    Intro to JavaScript for
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">programmers</a>
+    and
+    <a href="http://www.w3schools.com/js/default.asp">beginners</a>.
+    <br>
+    For input, you use an HTML form and use event handlers to invoke functions.
+    <br>
+    Besides writing form element values, these are some options for
+    <a href="http://www.w3schools.com/js/js_output.asp">output</a>.
+  </div>
+</footer>
+
+<script src="javascript/conversions.js"></script>
+
+</body>
+</html>
